@@ -1,0 +1,32 @@
+<div style="position: sticky; top: 0; left: 0; background-color: white;">
+    {{visibilityTrack | json}}
+</div>
+
+<div id="scrollArea">
+
+    <app-comp1></app-comp1>
+    <app-comp2></app-comp2>
+    <app-comp3></app-comp3>
+    <app-comp4></app-comp4>
+
+    <div #comp5>
+        <app-comp5 *appViewportVisibilityListener="comp5;nextTrack:visibilityTrack;nextId:6"></app-comp5>
+    </div>
+
+    <div #comp6 *ngIf="visibilityTrack[6]">
+        <app-comp6 *appViewportVisibilityListener="comp6;nextTrack:visibilityTrack;nextId:7"></app-comp6>
+    </div>
+
+    <div #comp7 *ngIf="visibilityTrack[7]">
+        <app-comp7 *appViewportVisibilityListener="comp7;nextTrack:visibilityTrack;nextId:8"></app-comp7>
+    </div>
+
+    <div #comp8 *ngIf="visibilityTrack[8]">
+        <app-comp8 *appViewportVisibilityListener="comp8;nextTrack:visibilityTrack;nextId:9"></app-comp8>
+    </div>
+
+    <div #comp9 *ngIf="visibilityTrack[9]">
+        <app-comp9 *appViewportVisibilityListener="comp9"></app-comp9>
+    </div>
+
+</div>
